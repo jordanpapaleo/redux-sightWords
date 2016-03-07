@@ -2,21 +2,15 @@ import React, { Component, PropTypes } from 'react'
 import Nav from 'components/Nav'
 
 export default class App extends Component {
-  /*static get displayName () {
+  static get displayName () {
     return 'App'
-  }*/
-
-  static displayName = 'App'
-
-  static propTypes {
-    children: PropTypes.object
   }
 
-/*  static propTypes () {
+  static get propTypes () {
     return {
       children: PropTypes.object
     }
-  }*/
+  }
 
   render () {
     return (

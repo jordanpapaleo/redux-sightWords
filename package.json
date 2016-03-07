@@ -37,8 +37,10 @@
     "react": "0.14.6",
     "react-dom": "0.14.6",
     "react-icons": "^1.0.3",
+    "react-redux": "^4.4.0",
     "react-router": "^2.0.0",
     "react-router-redux": "^3.0.0",
+    "redux": "^3.3.1",
     "redux-promise": "^0.5.1"
   },
   "devDependencies": {

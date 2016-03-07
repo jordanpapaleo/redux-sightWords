@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import WeatherReducer from './reducerWeather'
+import WordsReducer from './wordsReducer'
 
 // maps our state
 const rootReducer = combineReducers({
-  weather: WeatherReducer
+  wordStore: WordsReducer
 })
 
 export default rootReducer

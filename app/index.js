@@ -11,6 +11,8 @@ import ReduxPromise from 'redux-promise'
 import reducers from 'reducers'
 import routes from 'Routes'
 
+import { getWords } from 'actions/wordsActions'
+
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore)
 const log = debug('application:bootstrap')
 
@@ -22,6 +24,8 @@ log('adding application node to body')
 document.body.appendChild(domNode)
 
 const store = createStoreWithMiddleware(reducers)
+
+store.dispatch(getWords())
 
 const router = (
   <Provider store={store}>

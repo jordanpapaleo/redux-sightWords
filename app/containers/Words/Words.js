@@ -8,18 +8,13 @@ export default class Words extends Component {
     return 'Words'
   }
 
-  static get propTypes () {
-    return {
-      words: PropTypes.array
-    }
-  }
-
   constructor (props) {
     super(props)
 
     this.state = {
       set: 0,
       index: 0,
+      // currentWord: AppStore.getWord(0, 0),
       nextWord: '',
       previousWord: ''
     }
@@ -28,6 +23,17 @@ export default class Words extends Component {
     // this.nextWord = this.nextWord.bind(this)
     // this.say = this.say.bind(this)
   }
+
+  /*componentWillMount () {
+    AppStore.addChangeListener((payload) => {
+      console.log('Payload', payload)
+      this.setState({
+        currentWord: payload.activeWord,
+        set: payload.set,
+        index: payload.index
+      })
+    })
+  }*/
 
   previousWord () {
     // AppActions.previousWord(this.state.set, this.state.index)
