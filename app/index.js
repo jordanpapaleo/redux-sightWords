@@ -18,8 +18,8 @@ import ReduxPromise from 'redux-promise'
 import reducers from 'reducers'
 import routes from 'Routes'
 
-import DomNodes from 'components/DomComponents'
-const { Div } = DomNodes
+import DomComponents from 'components/DomComponents'
+const { Div } = DomComponents
 
 import { getWords } from 'actions/wordsActions'
 

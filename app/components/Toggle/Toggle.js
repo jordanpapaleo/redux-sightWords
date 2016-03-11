@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 
-import DomNodes from 'components/DomComponents'
-const { Div } = DomNodes
+import DomComponents from 'components/DomComponents'
+const { Div } = DomComponents
 
 export default class Toggle extends Component {
   static get displayName () {

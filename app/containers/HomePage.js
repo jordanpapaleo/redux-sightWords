@@ -5,8 +5,8 @@ import { push } from 'react-router-redux'
 import ToggleSet from 'components/ToggleSet'
 import { setActive, mergeSets } from 'actions/wordsActions'
 
-import DomNodes from 'components/DomComponents'
-const { Div, Ul, Li, Button } = DomNodes
+import DomComponents from 'components/DomComponents'
+const { Div, Ul, Li, Button } = DomComponents
 
 export default class HomePage extends Component {
   static get displayName () {

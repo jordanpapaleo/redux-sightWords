@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import Word from 'components/Word'
 
-import DomNodes from 'components/DomComponents'
-const { Div, Button } = DomNodes
+import DomComponents from 'components/DomComponents'
+const { Div, Button } = DomComponents
 
 class WordsPage extends Component {
   static get displayName () {
@@ -53,7 +53,7 @@ class WordsPage extends Component {
         <Div className='col-md-10'>
           {mergedWords.map((word, i) => {
             if (i === this.state.index) {
-              return <Word value={word} />
+              return <Word key={word} value={word} />
             }
           })}
         </Div>
@@ -64,7 +64,6 @@ class WordsPage extends Component {
 }
 
 function mapStateToProps (state) {
-  console.info('MSTP', state)
   return {
     mergedWords: state.wordStore.mergedWords
   }

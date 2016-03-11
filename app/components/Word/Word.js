@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import SpeakService from 'utils/SpeakService'
 
-import DomNodes from 'components/DomComponents'
-const { Div } = DomNodes
+import DomComponents from 'components/DomComponents'
+const { Div } = DomComponents
 
 export default class Word extends Component {
   static get displayName () {
