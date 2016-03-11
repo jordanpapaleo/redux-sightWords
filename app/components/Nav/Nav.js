@@ -10,7 +10,7 @@ export default class Nav extends Component {
     return (
       <div>
         <ul>
-          <li><Link to='/'>Sight Words<Link>
+          <li><Link to='/'>Sight Words</Link></li>
           <li><Link to='/home'>Home</Link></li>
           <li><Link to='/words'>Words</Link></li>
           <li><Link to='/settings'>Settings</Link></li>

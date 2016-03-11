@@ -1,6 +1,6 @@
 export const GET_WORDS = 'GET_WORDS'
 export const SET_ACTIVE = 'SET_ACTIVE'
-
+export const MERGE_SETS = 'MERGE_SETS'
 
 export function getWords () {
   return {
@@ -10,14 +10,18 @@ export function getWords () {
 }
 
 export function setActive (set) {
-  console.info('setActive', set)
   return {
     type: SET_ACTIVE,
-    payload: true
+    payload: set
   }
 }
 
-
+export function mergeSets (setsArray) {
+  return {
+    type: MERGE_SETS,
+    payload: setsArray
+  }
+}
 const wordSets = [
   {
     id: 0,
