@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import SpeakService from 'utils/SpeakService'
 
+import DomNodes from 'components/DomComponents'
+const { Div } = DomNodes
+
 export default class Word extends Component {
   static get displayName () {
     return 'Word'
@@ -25,7 +28,7 @@ export default class Word extends Component {
     const size = '150px'
 
     return (
-      <div className='text-center' style={{lineHeight: size, fontSize: size}} onClick={this.say}>{this.props.value}</div>
+      <Div className='text-center' style={{lineHeight: size, fontSize: size}} onClick={this.say}>{this.props.value}</Div>
     )
   }
 }

@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 
+import DomNodes from 'components/DomComponents'
+const { Div } = DomNodes
+
 export default class Toggle extends Component {
   static get displayName () {
     return 'Toggle'
@@ -43,7 +46,7 @@ export default class Toggle extends Component {
     }
 
     return (
-      <div style={styles} onClick={this.toggle}>{this.props.label}</div>
+      <Div style={styles} onClick={this.toggle}>{this.props.label}</Div>
     )
   }
 }

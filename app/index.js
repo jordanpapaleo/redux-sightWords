@@ -17,6 +17,10 @@ import ReduxPromise from 'redux-promise'
 
 import reducers from 'reducers'
 import routes from 'Routes'
+
+import DomNodes from 'components/DomComponents'
+const { Div } = DomNodes
+
 import { getWords } from 'actions/wordsActions'
 
 // Apply the middleware to the store
@@ -43,10 +47,10 @@ document.body.appendChild(domNode)
 
 const router = (
   <Provider store={store}>
-    <div>
+    <Div>
       <Router history={history} routes={routes} />
-      {/*<DevTools />*/}
-    </div>
+      <DevTools />
+    </Div>
   </Provider>
 )
 

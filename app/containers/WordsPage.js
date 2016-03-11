@@ -2,6 +2,9 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import Word from 'components/Word'
 
+import DomNodes from 'components/DomComponents'
+const { Div, Button } = DomNodes
+
 class WordsPage extends Component {
   static get displayName () {
     return 'WordsPage'
@@ -45,17 +48,17 @@ class WordsPage extends Component {
     }
 
     return (
-      <div className='row'>
-        <button className='col-md-1' onClick={this.previous}>Prev</button>
-        <div className='col-md-10'>
+      <Div className='row'>
+        <Button className='col-md-1' onClick={this.previous}>Prev</Button>
+        <Div className='col-md-10'>
           {mergedWords.map((word, i) => {
             if (i === this.state.index) {
               return <Word value={word} />
             }
           })}
-        </div>
-        <button className='col-md-1' onClick={this.next}>Next</button>
-      </div>
+        </Div>
+        <Button className='col-md-1' onClick={this.next}>Next</Button>
+      </Div>
     )
   }
 }

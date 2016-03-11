@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import Nav from 'components/Nav'
 
+import DomNodes from 'components/DomComponents'
+const { Div, Section } = DomNodes
+
 export default class App extends Component {
   static get displayName () {
     return 'App'
@@ -14,14 +17,14 @@ export default class App extends Component {
 
   render () {
     return (
-      <div className='container-fluid app-wrapper'>
+      <Div className='container-fluid app-wrapper'>
         <Nav />
-        <section className='app-content'>
-          <div className='row'>
-            <div className='col-md-12'>{this.props.children}</div>
-          </div>
-        </section>
-      </div>
+        <Section className='app-content'>
+          <Div className='row'>
+            <Div className='col-md-12'>{this.props.children}</Div>
+          </Div>
+        </Section>
+      </Div>
     )
   }
 }
